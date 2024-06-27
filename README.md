@@ -1,2 +1,2 @@
 # TankTrouble-scripts
-An archive of TankTrouble userscripts.
+An archive of TankTrouble scripts.
