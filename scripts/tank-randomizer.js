@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name        Tank-Randomizer
-// @author      Kamarov
-// @description Bring an element of surprise to your tank customization experience with the Tank Randomizer!
-// @version     1.0.0
+// @author      kamarov
+// @description Bring an element of surprise to your tank customization experience with the Tank Randomizer.
+// @version     1.1.0
 // @namespace   https://github.com/kamarov-therussiantank
 // @license     GPL-3.0
 // @match       https://*.tanktrouble.com/*
-// @desc        Randomize your tank in style!
+// @desc        Randomizes your tank in just one click of a button.
 // @run-at      document-end
 // @grant       GM_addStyle
 // @require     https://update.greasyfork.org/scripts/482092/1297984/TankTrouble%20Development%20Library.js
@@ -18,6 +18,8 @@
 GM_addStyle(`
 .randomize-button {
   margin-bottom: 10px;
+  height: 20px;
+  width: 100px;
 }
 `);
 
@@ -172,7 +174,7 @@ whenContentInitialized().then(() => {
             <div class="header">Tank Randomizer</div>
             Inject a dash of unpredictability into your tank's appearance
             <hr>
-            <div class="header" style="color: #e7c811;">Randomize</div>
+            <div class="header" style="color: #e7c811; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Randomize</div>
         </div>
     `);
     var content = $('<div></div>');
@@ -192,4 +194,3 @@ whenContentInitialized().then(() => {
         return colours[Math.floor(Math.random() * colours.length)];
     }
 });
-
