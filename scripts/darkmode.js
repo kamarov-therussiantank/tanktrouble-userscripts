@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name        TankTrouble Dark Mode
+// @name        Dark Mode
 // @author      kamarov
 // @description Dark Mode for TankTrouble.
-// @version     1.0.0
+// @version     2.0.0
 // @namespace   https://github.com/kamarov-therussiantank
 // @license     GPL-3.0
 // @match       https://*.tanktrouble.com/*
-// @desc        Changes the light theme of the website to dark theme.
+// @desc        Changes the light theme of the website to dark theme. It also doesn't damage your eyes.
 // @run-at      document-end
 // @grant       GM_addStyle
 // @require     https://update.greasyfork.org/scripts/482092/1297984/TankTrouble%20Development%20Library.js
@@ -431,5 +431,132 @@ body {
 .other .button.page img.selected.active[src*=page5] {
     background-image: -webkit-image-set(url(https://raw.githubusercontent.com/turtlesteak/TankTroubleAddonsFinale/main/images/forum/page5SelectedActive.png) 1x, url(https://raw.githubusercontent.com/turtlesteak/TankTroubleAddonsFinale/main/images/forum/page5SelectedActive@2x.png) 2x);
     background-image: image-set(url(https://raw.githubusercontent.com/turtlesteak/TankTroubleAddonsFinale/main/images/forum/page5SelectedActive.png) 1x, url(https://raw.githubusercontent.com/turtlesteak/TankTroubleAddonsFinale/main/images/forum/page5SelectedActive@2x.png) 2x)
+}
+#chat.open input {
+    white-space: nowrap
+}
+
+#clipboard {
+    opacity: 0
+}
+::-webkit-scrollbar {
+    width: 10px
+}
+
+::-webkit-scrollbar-button {
+    background-color: #353535;
+    height: 0;
+    width: 0;
+    border-radius: 5px;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s
+}
+
+::-webkit-scrollbar-track {
+    background-color: #646464
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #353535
+}
+
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #5a5a5a;
+    border-radius: 2px;
+    -webkit-transition: 1s;
+    transition: 1s
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #707070
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+    border-radius: 0;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s
+}
+
+::-webkit-scrollbar-button:vertical:decrement:hover {
+    background-color: #626262
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+    border-radius: 0;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s
+}
+
+::-webkit-scrollbar-button:vertical:increment:hover {
+    background-color: #626262
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #646464
+}
+
+::-webkit-resizer {
+    background-color: #666
+}
+.tooltipster-default {
+    box-shadow: 0 12px 14px 0 rgba(0,0,0,.25);
+    border-radius: 5px;
+    background: linear-gradient(to bottom,#242424,#1a1a1a);
+    color: #ececec
+}
+.tooltipster-arrow span,
+.tooltipster-arrow-bottom span,
+.tooltipster-base .tooltipster-arrow span,
+.tooltipster-default .tooltipster-arrow span {
+    background: -o-linear-gradient(45deg, #191919 -225%, #1a1a1a 50%);
+    background: linear-gradient(45deg, #191919 -225%, #1a1a1a 50%)
+}
+#masthead,
+#primary {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    background-color: #fff;
+    padding: 20px !important
+}
+
+#masthead {
+    background: 0
+}
+
+#masthead img,
+#primary img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%)
+}
+button:disabled {
+    background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+    color: #f0f0f0;
+    cursor: default;
+}
+.shopItem {
+    background: linear-gradient(to bottom, #242424, #1a1a1a);
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 10px 20px;
+    padding: 5px 0;
+    width: 140px;
+    height: 245px;
+    box-sizing: border-box;
+    position: relative;
+    vertical-align: top;
+    color: #fff;
+    text-align: center;
+}
+#overlay .messages .message {
+    background: linear-gradient(to bottom, #242424, #1a1a1a);
+    border-radius: 5px;
+    color: #000;
+    margin: 20px auto 20px auto;
+    padding: 3px;
+    text-align: left;
+    width: 594px;
+    overflow-wrap: break-word;
+    color: #fff;
 }
 `);
